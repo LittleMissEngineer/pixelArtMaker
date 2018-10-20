@@ -9,9 +9,9 @@ let table = document.getElementById('pixelCanvas');
 
 // When size is submitted by the user, call makeGrid()
 
-color.addEventListener("click", function() {});
+color.addEventListener("click", function(event) {});
 
-size.onsubmit = function(event){
+size.onsubmit =function(event){
     event.preventDefault();
     clearGrid();
     makeGrid();
@@ -32,7 +32,7 @@ function makeGrid() {
 
 function clearGrid(){
     //delete table.firstChild;
-    while(table.firstChild){
+    while(table.hasChildNodes()){
         table.removeChild(table.firstChild);
     }
 }
